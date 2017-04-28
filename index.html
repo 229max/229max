@@ -369,7 +369,7 @@
 <li><p>读取图片并添加邮件头</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fp = open(imgpath, <span class="string">'rb'</span>)</div><div class="line">msgImage = MIMEImage(fp.read())</div><div class="line">fp.close()</div><div class="line"></div><div class="line"><span class="comment"># Define the image's ID as referenced above</span></div><div class="line">msgImage.add_header(<span class="string">'Content-ID'</span>, <span class="string">'&lt;image&#123;count&#125;&gt;'</span>.format(count=i))</div><div class="line">msgRoot.attach(msgImage)</div></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>发送邮件lib代码</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/28/Python-发送带图片邮件/#more" rel="contents">
